@@ -29,14 +29,6 @@ def choose_best_sum(t, k, ls):
 #     return max(a) if a else None
 
 
-
-
-
-
-
-
-
-
 ## The third solution
 # import itertools
 # def choose_best_sum(t, k, ls):
@@ -119,3 +111,18 @@ def choose_best_sum(t, k, ls):
 
 # ys = [91, 74, 73, 85, 73, 81, 87] choose_best_sum(230, 3, ys) -> 228
 
+
+### [After the submission] ###
+##Similar solution from @Paruzaka46
+# from itertools import combinations
+# def choose_best_sum(t, k, ls):
+#     combis = list(combinations(ls,k))
+#     sums = [sum(c) for c in combis]
+#     sum2 = [n for n in sums if n <= t]
+#     return max(sum2) if sum2 else None
+
+##Best practice for me
+# from itertools import combinations
+
+# def choose_best_sum(t, k, ls):
+#     return max((sum(v) for v in combinations(ls,k) if sum(v)<=t), default=None)
