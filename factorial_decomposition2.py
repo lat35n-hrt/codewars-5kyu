@@ -5,11 +5,10 @@ def decomp(n):
     ls = []
     a = []
     for i in range(2, n+1):
+        ls.append(i)
         for p in range(2, i):
-            if i % p != 0:
-                continue
-            elif p == (i-1):
-                ls.append(i)
+            if i % p == 0:
+                ls.remove(i)
                 break
     for t in ls:
         k = 0
@@ -21,7 +20,7 @@ def decomp(n):
                 break
         if k == 1:
             a.append(str(t))
-        elif k > 1:              
+        elif k > 1:
             a.append(f"{t}^{k}")
     return ' * '.join(a)
 
