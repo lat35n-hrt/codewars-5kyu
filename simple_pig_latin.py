@@ -10,6 +10,9 @@ def piglatin_word(match):
 def pig_it(text):
     return re.sub(r'\b\w+\b', piglatin_word, text)
 
+
+
+
 # Second
 # import re
 # def pig_it(text):
@@ -58,3 +61,9 @@ def pig_it(text):
 # # Test cases
 # test.assert_equals(pig_it('Pig latin is cool'),'igPay atinlay siay oolcay')
 # test.assert_equals(pig_it('This is my string'),'hisTay siay ymay tringsay')
+
+
+# Referring other's solution
+# import re
+# def pig_it(text):
+#     return re.sub(r'(\w{1})(\w*)', r'\2\1ay', text)
