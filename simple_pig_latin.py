@@ -2,15 +2,13 @@ import re
 
 def piglatin_word(match):
     i = match.group()
-    if len(i) == 1 and i.isalpha():
+    if len(i) == 1:
         return i[0] + 'ay'
-    elif len(i) > 1 and i.isalpha():
+    elif len(i) > 1:
         return i[1:] + i[0] + 'ay'
 
 def pig_it(text):
     return re.sub(r'\b\w+\b', piglatin_word, text)
-
-
 
 # Second
 # import re
