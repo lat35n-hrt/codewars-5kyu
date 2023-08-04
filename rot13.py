@@ -1,8 +1,15 @@
-# The second solution
+# refactoring
 def rot13(message):
     return ''.join(chr(ord('a') + (ord(i)-ord('a')+13) % 26) if 'a' <= i <= 'z' else 
                    chr(ord('A') + (ord(i)-ord('A')+13) % 26) if 'A' <= i <= 'Z' else 
-                   chr(ord(i)) for i in message)
+                   i for i in message)
+
+
+# The second solution
+# def rot13(message):
+#     return ''.join(chr(ord('a') + (ord(i)-ord('a')+13) % 26) if 'a' <= i <= 'z' else 
+#                    chr(ord('A') + (ord(i)-ord('A')+13) % 26) if 'A' <= i <= 'Z' else 
+#                    chr(ord(i)) for i in message)
 
 # The first solution
 # def rot13(message):
