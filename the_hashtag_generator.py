@@ -1,6 +1,6 @@
 # The second solution
 def generate_hashtag(s):
-    if s is '' or len(s) > 140 : return False
+    if not s or len(s) > 140 : return False
     return '#' + ''.join(i.capitalize() for i in s.split())
 
 
